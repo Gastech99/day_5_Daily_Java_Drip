@@ -24,5 +24,16 @@ public class RunTimeExcetionTest {
         }catch (InputMismatchException Ie){
             System.out.println("Veuillez saisir un entier svp! " + Ie.getMessage());
         }
+
+        System.out.println("************************Exception général******************************");
+        int z;
+        Scanner keyboard= new Scanner(System.in);
+        try {
+            System.out.println("Veuillez saisir la valeur de z : ");
+            z = keyboard.nextInt();
+            System.out.println(1/z);
+        }catch (Exception ex){
+            System.err.println("Veuillez saisir un entier svp! " + ex.getMessage());
+        }
     }
 }
